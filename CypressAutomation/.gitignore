@@ -1,0 +1,9 @@
+/node_modules/
+/dist/
+/.idea/
+/testresults/
+*.html
+/allure-report/
+/allure-results/
+/reports/
+*.log
