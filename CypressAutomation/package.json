@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "tsc",
-    "compilewatch": "tsc -w"
+    "cy:run": "cypress run"
   },
   "keywords": [],
   "author": "",
