@@ -8,6 +8,15 @@ describe('My First Test', () => {
     // Parent child chaining
     cy.get(".products").find(".product").should("have.length", 4);
 
-    cy.get(".products").find(".product").eq(1).contains("ADD TO CART").click();
+    // cy.get(".products").find(".product").eq(1).contains("ADD TO CART").click();
+    cy.get(".products").find(".product").each(($el, index, list) => {
+      const element = cy.wrap($el);
+      const txt = $el.find(".product-name").text();
+      const vegitable = "Carrot";
+      if(txt.includes(vegitable)){
+        element.find("button").click();
+      }
+    });
+
   })
 })
