@@ -1,5 +1,3 @@
-import promisify from 'cypress-promise';
-
 describe('My Second Third Suite', () => {
   it('My Third Test case', async() => {
     const url = "https://rahulshettyacademy.com/AutomationPractice/";
