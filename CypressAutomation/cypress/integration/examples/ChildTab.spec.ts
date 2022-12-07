@@ -7,5 +7,7 @@ describe('My ChildTab Suite', () => {
         });
         cy.get('#opentab').invoke("removeAttr","target");
         cy.get('#opentab').click();
+        cy.url().should('include','rahulshettyacademy');
+        cy.go('back');
     });
   });
