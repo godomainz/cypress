@@ -1,5 +1,5 @@
-describe('My ChildTab Suite', () => {
-    it('My ChildTab Test case',() => {
+describe('My Table Suite', () => {
+    it('My Table case',() => {
         const url = "https://rahulshettyacademy.com/AutomationPractice/";
         cy.visit(url);
         const subject = 'Master Selenium Automation in simple Python Language';

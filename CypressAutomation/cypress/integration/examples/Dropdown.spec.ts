@@ -1,4 +1,3 @@
-import promisify from 'cypress-promise';
 describe('My Second Dropdown Suite', () => {
     it('My Dropdown Test case', async() => {
         const url = "https://rahulshettyacademy.com/AutomationPractice/";

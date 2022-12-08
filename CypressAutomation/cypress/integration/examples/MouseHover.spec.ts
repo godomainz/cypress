@@ -1,4 +1,4 @@
-describe('My ChildTab Suite', () => {
+describe('My MouseHover Suite', () => {
     it('My ChildTab Test case',() => {
         const url = "https://rahulshettyacademy.com/AutomationPractice/";
         cy.visit(url);

@@ -1,5 +1,5 @@
-describe('My Second Third Suite', () => {
-  it('My Third Test case', async() => {
+describe('My CheckBox Suite', () => {
+  it('My CheckBox case', async() => {
     const url = "https://rahulshettyacademy.com/AutomationPractice/";
     cy.visit(url);
     cy.get("#checkBoxOption1").check().should("be.checked").and("have.value","option1");
