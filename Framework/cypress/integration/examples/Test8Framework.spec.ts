@@ -1,5 +1,5 @@
-let data;
 describe('My first Framework Suite', () => {
+    let data;
     before(()=>{
         cy.fixture('example').then((jsondata)=>{
             data = jsondata;
