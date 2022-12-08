@@ -1,0 +1,20 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.2.0",
+    "cypress-iframe": "^1.0.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "cypress-promise": "^1.1.0"
+  }
+}
