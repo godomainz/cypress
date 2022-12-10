@@ -1,6 +1,10 @@
+import { HomePage } from "./pageObjects/HomePage";
+
 describe('My first Framework Suite', () => {
     let data;
+    let homePage: HomePage;
     before(()=>{
+        homePage = new HomePage();
         cy.fixture('example').then((jsondata)=>{
             data = jsondata;
         });
@@ -11,7 +15,7 @@ describe('My first Framework Suite', () => {
     it('My Commands case', () => {
         // cy.pause();
         // cy.get(':nth-child(2) > .nav-link').click().debug();
-        cy.get(':nth-child(2) > .nav-link').click();
+        homePage.getShopTab().click();
         data.productNames.forEach((val)=>{
             cy.selectProduct(val);
         });

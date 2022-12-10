@@ -1,6 +1,10 @@
+import { HomePage } from './pageObjects/HomePage';
+
 describe('My first Framework Suite', () => {
     let data;
+    let homePage: HomePage;
     before(()=>{
+        homePage = new HomePage();
         cy.fixture('example').then((jsondata)=>{
             data = jsondata;
         });
@@ -9,18 +13,18 @@ describe('My first Framework Suite', () => {
     });
 
     it('My Data Binding case', () => {
-        cy.get('input[name="name"]:nth-child(1)').type(data.name);
-        cy.get('#exampleFormControlSelect1').select(data.gender);
-        cy.get('input[name="name"]:nth-child(2)').should('have.value', data.name);
+        homePage.getName().type(data.name);
+        homePage.getGender(data.gender);
+        homePage.getTwoWayDataBinding().should('have.value', data.name);
     });
 
     it('My minlength case', () => {
-        cy.get('input[name="name"]:nth-child(1)').clear();
-        cy.get('input[name="name"]:nth-child(2)').should('have.attr', 'minlength', 2);
-        cy.get('input[name="name"]:nth-child(1)').type(data.name);
+        homePage.getName().clear();
+        homePage.getName().should('have.attr', 'minlength', 2);
+        homePage.getName().type(data.name);
     });
 
     it('My disabled case', () => {
-        cy.get('#inlineRadio3').should('be.disabled');
+        homePage.getEntrepreneur().should('be.disabled');
     });
   });
