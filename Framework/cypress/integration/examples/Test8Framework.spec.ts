@@ -14,7 +14,7 @@ describe('My first Framework Suite', () => {
 
     it('My Data Binding case', () => {
         homePage.getName().type(data.name);
-        homePage.getGender(data.gender);
+        homePage.getGender().select(data.gender);
         homePage.getTwoWayDataBinding().should('have.value', data.name);
     });
 

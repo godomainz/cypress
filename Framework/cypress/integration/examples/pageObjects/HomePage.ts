@@ -15,8 +15,8 @@ export class HomePage {
     getTwoWayDataBinding = () => {
         return cy.get(this.twoWayDataBinding);
     }
-    getGender = (gender:string) => {
-        return cy.get(this.gender).select(gender);
+    getGender = () => {
+        return cy.get(this.gender);
     }
     getEntrepreneur = () => {
         return cy.get(this.entrepreneur);
