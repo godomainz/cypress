@@ -1,3 +1,5 @@
+import { ShopPage } from "../integration/examples/pageObjects/ShopPage";
+
 declare global {
     namespace Cypress {
       interface Chainable {
@@ -6,9 +8,10 @@ declare global {
     }
 }
 export const selectProduct = (productName:string) => {
-    cy.get('h4.card-title > a').each(($el, index)=>{
+    const shopPage = new ShopPage();
+    shopPage.getProductName().each(($el, index)=>{
         if($el.text().includes(productName)){
-            cy.get('app-card button.btn').eq(index).click();
+            shopPage.getAddButton().eq(index).click();
         }
     });
 };

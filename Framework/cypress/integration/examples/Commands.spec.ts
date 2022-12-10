@@ -1,10 +1,13 @@
 import { HomePage } from "./pageObjects/HomePage";
+import { ShopPage } from "./pageObjects/ShopPage";
 
 describe('My first Framework Suite', () => {
     let data;
     let homePage: HomePage;
+    let shopPage:ShopPage;
     before(()=>{
         homePage = new HomePage();
+        shopPage = new ShopPage();
         cy.fixture('example').then((jsondata)=>{
             data = jsondata;
         });
@@ -19,6 +22,7 @@ describe('My first Framework Suite', () => {
         data.productNames.forEach((val)=>{
             cy.selectProduct(val);
         });
+        shopPage.getCheckoutButton().click();
     });
 
 });
