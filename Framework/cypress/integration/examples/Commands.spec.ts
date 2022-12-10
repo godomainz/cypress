@@ -9,6 +9,8 @@ describe('My first Framework Suite', () => {
     });
 
     it('My Commands case', () => {
+        // cy.pause();
+        // cy.get(':nth-child(2) > .nav-link').click().debug();
         cy.get(':nth-child(2) > .nav-link').click();
         data.productNames.forEach((val)=>{
             cy.selectProduct(val);
