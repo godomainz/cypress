@@ -29,8 +29,13 @@ describe('My first Framework Suite', () => {
         shopPage.getCheckoutButton().click();
     });
 
-    it('My should load Country page', () => {
+    it('My should verify grand total', () => {
         checkoutPage = new CheckoutPage();
+        checkoutPage.verifyGrandTotal();
+        
+    });
+
+    it('My should load Country page', () => {
         checkoutPage.getCheckoutButton().click();
         deliveryLocationPage = new DeliveryLocationPage();
         const countryName = "India";
