@@ -1,3 +1,5 @@
+import { CheckoutPage } from "./pageObjects/CheckoutPage";
+import { DeliveryLocationPage } from "./pageObjects/DeliveryLocationPage";
 import { HomePage } from "./pageObjects/HomePage";
 import { ShopPage } from "./pageObjects/ShopPage";
 
@@ -5,6 +7,8 @@ describe('My first Framework Suite', () => {
     let data;
     let homePage: HomePage;
     let shopPage:ShopPage;
+    let checkoutPage: CheckoutPage;
+    let deliveryLocationPage: DeliveryLocationPage;
     before(()=>{
         homePage = new HomePage();
         shopPage = new ShopPage();
@@ -23,6 +27,16 @@ describe('My first Framework Suite', () => {
             cy.selectProduct(val);
         });
         shopPage.getCheckoutButton().click();
+    });
+
+    it('My should load Country page', () => {
+        checkoutPage = new CheckoutPage();
+        checkoutPage.getCheckoutButton().click();
+        deliveryLocationPage = new DeliveryLocationPage();
+        const countryName = "India";
+        deliveryLocationPage.getDeliveryLocation().type("Ind");
+        // Cypress.config("defaultCommandTimeout", 8000);
+        deliveryLocationPage.getCountry(countryName);
     });
 
 });
