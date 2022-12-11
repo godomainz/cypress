@@ -39,4 +39,10 @@ describe('My first Framework Suite', () => {
         deliveryLocationPage.getCountry(countryName);
     });
 
+    it('My should click purchase', () => {
+        deliveryLocationPage.getAgreeCheckBox().check({force: true});
+        deliveryLocationPage.getPurchaseButton().click();
+        deliveryLocationPage.getSuccessMessage().should('contain.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).');
+    });
+
 });

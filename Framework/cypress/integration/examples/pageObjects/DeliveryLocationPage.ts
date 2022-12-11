@@ -1,6 +1,9 @@
 export class DeliveryLocationPage {
     private deliveryLocation:string = '#country';
     private country:string = '.suggestions';
+    private agreeCheckBox: string = '#checkbox2';
+    private purchaseButton: string = 'input[value="Purchase"]';
+    private successMessage: string = '.alert';
 
     getDeliveryLocation = () => {
         return cy.get(this.deliveryLocation);
@@ -16,4 +19,15 @@ export class DeliveryLocationPage {
             }
         )
     };
+
+    getAgreeCheckBox = () => {
+        return cy.get(this.agreeCheckBox);
+    }
+
+    getPurchaseButton = () => {
+        return cy.get(this.purchaseButton);
+    }
+    getSuccessMessage = () => {
+        return cy.get(this.successMessage);
+    }
 }
