@@ -8,7 +8,7 @@ describe('My first Framework Suite', () => {
         cy.fixture('example').then((jsondata)=>{
             data = jsondata;
         });
-        const url = "https://rahulshettyacademy.com/angularpractice/";
+        const url = Cypress.env('url')+"/angularpractice/";
         cy.visit(url);
     });
 
