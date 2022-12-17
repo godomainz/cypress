@@ -6,6 +6,12 @@ export default defineConfig({
     url: "https://rahulshettyacademy.com"
   },
   reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: true,
+  },
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
