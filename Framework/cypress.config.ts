@@ -7,7 +7,8 @@ export default defineConfig({
     url: "https://rahulshettyacademy.com",
     allure: true,
     allureAddVideoOnPass: true,
-    testAttachment: true
+    testAttachment: true,
+    attachment: true
   },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
