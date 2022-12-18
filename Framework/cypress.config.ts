@@ -4,14 +4,17 @@ declare const allure: any;
 export default defineConfig({
   defaultCommandTimeout: 8000,
   env: {
-    url: "https://rahulshettyacademy.com"
+    url: "https://rahulshettyacademy.com",
+    allure: true,
+    allureAddVideoOnPass: true,
+    testAttachment: true
   },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: true,
+    saveAllAttempts: true
   },
   e2e: {
     setupNodeEvents(on, config) {
