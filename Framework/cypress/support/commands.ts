@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { ShopPage } from "../integration/examples/pageObjects/ShopPage";
 
 declare global {
