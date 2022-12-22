@@ -1,4 +1,4 @@
-import { AppDemoPage } from "./pageObjects/AppDemoPage";
+import { AppDemoPage } from "../pageObjects/AppDemoPage";
 
 describe('My Mock HTTP Suite', () => {
     let appDemoPage:AppDemoPage;

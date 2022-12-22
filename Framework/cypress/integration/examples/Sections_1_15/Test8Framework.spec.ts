@@ -1,4 +1,4 @@
-import { HomePage } from './pageObjects/HomePage';
+import { HomePage } from '../pageObjects/HomePage';
 
 describe('My first Framework Suite', () => {
     let data;

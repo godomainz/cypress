@@ -24,7 +24,7 @@ export default defineConfig({
       allureWriter(on, config);
       return config;
     },
-    specPattern: "./cypress/integration/examples/*.ts",
+    specPattern: "./cypress/integration/examples/Section*/*.ts",
     projectId: "1"
   },
 });

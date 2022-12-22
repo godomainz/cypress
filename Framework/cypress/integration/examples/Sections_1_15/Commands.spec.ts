@@ -1,7 +1,7 @@
-import { CheckoutPage } from "./pageObjects/CheckoutPage";
-import { DeliveryLocationPage } from "./pageObjects/DeliveryLocationPage";
-import { HomePage } from "./pageObjects/HomePage";
-import { ShopPage } from "./pageObjects/ShopPage";
+import { CheckoutPage } from "../pageObjects/CheckoutPage";
+import { DeliveryLocationPage } from "../pageObjects/DeliveryLocationPage";
+import { HomePage } from "../pageObjects/HomePage";
+import { ShopPage } from "../pageObjects/ShopPage";
 
 describe('My first Framework Suite', () => {
     let data;
