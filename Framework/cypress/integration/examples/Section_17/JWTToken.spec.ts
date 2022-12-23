@@ -1,5 +1,6 @@
 import { PaymentPage } from "../pageObjects/PaymentPage";
 import { ThankYouPage } from "../pageObjects/ThankYouPage";
+import * as neatCSV from "neat-csv";
 
 describe('My Mock JWT Token Suite', () => {
     let paymentPage: PaymentPage;
@@ -32,6 +33,12 @@ describe('My Mock JWT Token Suite', () => {
         cy.wait(3000);
         thankYoupage = new ThankYouPage();
         thankYoupage.getDownLoadBtn().click();
+        
+        cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_rahulshetty.csv").then(async (text)=>{
+            const csv = await neatCSV(text);
+            console.log(csv);
+        });
+
     });
 
     
